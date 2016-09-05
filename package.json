@@ -1,0 +1,22 @@
+{
+  "name": "randString",
+  "version": "1.0.1",
+  "description": "create a random string",
+  "main": "randString.js",
+  "scripts": {
+    "test": "randString.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aaronyang1122/randString.git"
+  },
+  "keywords": [
+    "randString"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aaronyang1122/randString/issues"
+  },
+  "homepage": "https://github.com/aaronyang1122/randString#readme"
+}
