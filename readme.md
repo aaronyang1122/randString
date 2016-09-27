@@ -1,8 +1,41 @@
-/*
- +	 * 1、第一个参数为输出随机字符串中字符的类型，接收类型为string 或 array，必需
- +	 * 		如果是 string 类型接收如下字符串：number：纯数字、letter：纯字母、symbol：符号、mix：混合(以上所有类型字符混合)
- +	 * 		如果是 array 类型接可以将 number、letter、symbol 等三种基础类型随意组合生成随机字符串
- +	 * 
- +	 * 2、第二个参数为输出随机字符串长度，接收类型为 number， 默认 10 ，最大 256
- +	 * 3、第三个参数为是否混合大写字母，接收类型为 booleans，选填 默认false
- +	 */
+#randString 
+##介绍（Introduce）
+一个node环境运行的用于生成随机字符串的小插件
+
+###1. 安装
+全局
+```javascript
+npm install -g randString
+```
+依赖项目
+```javascript
+npm install --save-dev randString
+```
+
+###2. 引用
+```javascript
+var randString = require('randString');
+```
+
+###3. 使用
+第一个参数是指生成字符串类型，必填参数，类型为字符串，预设值为 纯数字：'number', 纯字母：'letter', 纯符号：'symbol', 以上三种混合：'mix'
+```javascript
+randString('number');
+```
+>显然只能指定一个类型的字符生成的字符串显然是不合理的，所以这里提供了自定义类型，对上述单个类型通过数组方式组合
+
+```javascript
+var mixString = randString(['letter','number','symbol']);
+// 等同于
+// var mixString = randString('mix');
+```
+
+第二个参数是指生成字符串长度，选填参数，类型为整数型，默认值为10，最大值为256，输入整数不得超过256，否则取256为最大值
+```javascript
+randString('number', 20);
+```
+第三个参数是指字符串中是否容许有大写字母，选填参数，类型为布尔值，默认值false，不生成大写字母，此参数只有在生成含有字母的字符串时才有效，否则无效
+```javascript
+randString('number', 20, true);
+```
+

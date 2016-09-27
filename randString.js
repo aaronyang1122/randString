@@ -12,7 +12,7 @@ module.exports = function(type, length, uppercase){
 		return;
 	};
 	
-	if(arguments[1].constructor === Boolean){
+	if(arguments[1] && arguments[1].constructor === Boolean){
 		uppercase = arguments[1];
 		length = undefined;
 	}
